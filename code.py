@@ -1,11 +1,10 @@
-# --------------
-# --------------
 #Importing header files
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
 #Path of the file is stored in the variable path. 
+
 
 #Code starts here
 
@@ -42,13 +41,13 @@ top_countries=top_countries[:-1]
 
 #Function for top 10
 def top_ten(data, col):
-
+    
     #Creating a new list
     country_list=[]
-
+    
     #Finding the top 10 values of 'col' column
     country_list= list((data.nlargest(10,col)['Country_Name']))
-
+    
     #Returning the top 10 list
     return country_list
 
@@ -215,5 +214,6 @@ l=plt.legend()
 l.get_texts()[0].set_text('Gold_Total :' + str(best['Gold_Total'].values))
 l.get_texts()[1].set_text('Silver_Total :' + str(best['Silver_Total'].values))
 l.get_texts()[2].set_text('Bronze_Total :' + str(best['Bronze_Total'].values))
+
 
 
